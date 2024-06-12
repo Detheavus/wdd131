@@ -1,13 +1,12 @@
 * {
     margin: 0;
     padding: 0;
+
 }
 
 
-body {
+.grid-container {
     display: grid;
-    height: 100vh;
-    grid-template: auto 1fr 75px / 4fr;
 
   }
 
@@ -44,21 +43,35 @@ header {
 
 main {
     display: flex;
+    flex-basis: 0;
+    justify-content: center;
     background: rgb(211, 211, 211);
     font-size: larger;
     padding: 1rem;
-    justify-content: center; 
+
   }
 
 
 
 .card {
     display: grid;
-    background-color: rgb(211, 211, 211);
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-areas: 
+    'cardhead cardhead cardhead'
+    'text text image1'
+    'cardpic text2 text2';
+    grid-template-rows: 48px 1fr 1fr;
+    grid-template-columns: repeat(3, 2fr);
+    font-size: larger;
+    border: 1px solid grey;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
 .cardhead {
+    grid-area: cardhead;
     background-color: rgb(5, 88, 197);
     text-align: center;
     border: 1px solid;
@@ -70,25 +83,44 @@ main {
     -o-border-radius: 8px;
 }
 
+.card p {
+  grid-area: text;
+  padding: 16px;
+}
+p2 {
+  grid-area: text2;
+ }
 
+.cardimg {
+  grid-area: image1;
+  object-fit: contain;
+}
+
+.cardpic {
+  grid-area: cardpic;
+  max-width: 60%;
+
+}
 
 .links {
-    background: rgb(150, 150, 150);
-    grid-column: 3 / 4;
-    padding: 1rem;
-    font-size: larger;
-  }
+    margin-left: 24px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.linkslist {
+  padding: 2rem;
+}
 
 footer {
     background: grey;
     padding: 2rem;
     text-align: center;
-    grid-column: 1 / 4;
     color:rgb(0, 0, 0);
   }
 
 
-
-
-
- 

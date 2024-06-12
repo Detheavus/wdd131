@@ -8,42 +8,50 @@
         <meta name="description" content="WDD 131 - Dynamic WebFundamentals - Tyler Moore, A page to help me learn JavaScript">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/styles/base.css">
+        <script rel="scripts/getdate.js"></script>
     </head>
-    <body>
-        <header>
-            <h1>WDD 131 - Dynamic WebFundamentals - Tyler Moore</h1>
-            <nav class="navigation">
-                <a href="www.linkedin.com/in/tyler-moore-41020090" title="linkedIn">LinkedIn</a>
-                <a href="https://byui.instructure.com/" title="Projects">I-learn</a>
-                <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p23-p24#p23" title="Scripture">Scripture</a>
-                <a href="#" title="Final Project">Final Project</a>
-            </nav>
-        </header>
+    <body class="grid-container">
+        <div>
+            <header>
+                <h1>WDD 131 - Dynamic WebFundamentals - Tyler Moore</h1>
+                <nav class="navigation">
+                    <a href="www.linkedin.com/in/tyler-moore-41020090" title="linkedIn">LinkedIn</a>
+                    <a href="https://byui.instructure.com/" title="Projects">I-learn</a>
+                    <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p23-p24#p23" title="Scripture">Scripture</a>
+                    <a href="#" title="Final Project">Final Project</a>
+                </nav>
+            </header>
+        </div>
+        <div>
+            <main>
+                <section class="card">
+                    <h2 class="cardhead">About Me</h2>
+                    <p>I am Tyler and so far I do not enjoy CSS at all.</p>
+                    <img src="images/profile.jpg" alt="SkullMan" class="cardimg">
+                    <p2>I live in Utah, it is too hot or too cold for my taste most of the time.</p2>
+                    <img src="images/utah.jpg"alt="Utah" class="cardpic">
+                </section>
 
-        <main>
+                <section class="links">
+                    <h2 class="cardhead">Useful Links</h2>
+                        <div class="linkslist">
+                            <ul>
+                                <li><a href="https://css-tricks.com/" title="Css Tricks">CSS Tricks</a></li>
+                                <li>dislike</li>
+                                <li>css</li>
+                                <li>very much</li>
+                            </ul>
+                        </div>
+                </section>
 
-            <section class="about">
-                <h2 class="cardhead">About Me</h2>
-                <p>I am Tyler and so far I do not enjoy CSS at all.</p>
-                <img src="images/profile.jpg" alt="SkullMan" class="cardimg">
-            </section>
-
-            <section class="links">
-                <h2 class="cardhead">Useful Links</h2>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </section>
-
-        </main>
-
-        <footer>
-            <p>&copy 2024<span id="currentyear"></span> | Tyler Moore | Utah, USA</p>
-            <p class="lastmodified"> </p>
-        </footer>
+            </main>
+        </div>
+        <div>
+            <footer>
+                <p>&copy 2024<span id="currentyear"></span> | Tyler Moore | Utah, USA</p>
+                <p class="lastmodified"> </p>
+            </footer>
+        </div>
         <script src="/scripts/getdate.js" async defer></script>
     </body>
 </html>
