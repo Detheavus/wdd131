@@ -1,19 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-
+    
 }
 
-.grid-container {
-    display: grid;
-
-  }
-
+/*
 h1 {
     color: rgb(255, 255, 255);
     padding: 1.5rem;
 
-}
+} */
 header {
     background: rgb(5, 88, 197);
     grid-column: 1 / 4;
@@ -38,22 +34,23 @@ header {
   }
 
 main {
-    display: flex;
-    flex-basis: 0;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background: rgb(211, 211, 211);
     font-size: larger;
     padding: 1rem;
+
   }
 
 .card {
     display: grid;
+    max-width: 640px;
     grid-template-areas: 
     'cardhead cardhead cardhead'
     'text text image1'
     'cardpic text2 text2';
     grid-template-rows: 48px 1fr 1fr;
-    grid-template-columns: repeat(3, 2fr);
+    grid-template-columns: repeat(3, 1fr);
     font-size: larger;
     border: 1px solid grey;
     border-radius: 8px;
@@ -95,18 +92,9 @@ p2 {
   max-width: 60%;
 }
 
-.links {
-    margin-left: 24px;
-    border: 1px solid grey;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-}
-
 .linkslist {
-  padding: 2rem;
+  justify-content: center;
+  padding: 48px;
 }
 
 footer {
